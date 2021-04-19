@@ -23,26 +23,7 @@ public class FlexmarkDocGenerationTest {
   
   private static final Logger LOG = Logger.getLogger(FlexmarkDocGenerationTest.class.getName());
 
-  FlexmarkDocGenerator generator;
-
   public FlexmarkDocGenerationTest() {
-  }
-
-  @BeforeAll
-  public static void setUpClass() {
-  }
-
-  @AfterAll
-  public static void tearDownClass() {
-  }
-
-  @BeforeEach
-  public void setUp() {
-    generator = new FlexmarkDocGenerator();
-  }
-
-  @AfterEach
-  public void tearDown() {
   }
 
   /**
@@ -51,6 +32,7 @@ public class FlexmarkDocGenerationTest {
   @org.junit.jupiter.api.Test
   public void testGenerateDocument() throws Exception {
     File outFile;
+    FlexmarkDocGenerator generator = new FlexmarkDocGenerator();
     
     // generate HTML
     LOG.info("Generating HTML...");
